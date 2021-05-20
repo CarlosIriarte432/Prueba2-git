@@ -1,6 +1,6 @@
 # Prueba-git
 
-Primera página web
+Cambios a la pagina web con formulario para reservas y API que informa sobre clima
 
 Integrantes:
 
