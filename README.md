@@ -8,6 +8,5 @@ Integrantes:
 -Carlos Iriarte
 -Rodolfo Rodriguez
 
-link repositorio git:
+link github page:
 
-https://carlosiriarte432.github.io/Prueba-git/index.html
