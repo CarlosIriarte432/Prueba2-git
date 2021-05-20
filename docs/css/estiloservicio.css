@@ -1,0 +1,122 @@
+.header {
+    background-color: rgb(127, 197, 255);
+    display: flex;
+    justify-content: space-around;
+}
+
+.row{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+
+
+}
+
+.logo{
+    text-align-last: center;
+    
+
+}
+
+.cuadro{
+    background-color: lightslategray;
+    border-color: darkblue;
+    border-width: 3px;
+    border-style: groove;
+    place-content: center;
+    text-align-last: center;
+    padding: 10px;
+
+
+}
+.cuadro:hover{
+    background-color: rgb(0, 119, 255);
+    border-width: 10px;
+}
+
+
+.navegador{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-width: 1%;
+    border-color: burlywood;
+
+
+}
+
+
+.medio{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+body{
+    background-color: lightblue;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.carrusel{
+
+    content: icon;
+    
+}
+
+.contenido {
+    display: flex;
+    background-color: aquamarine;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    font-family: verdana;
+    font-weight: bold;
+}
+
+.principal {
+    background-color: lightblue;
+}
+
+
+.abajo{
+    text-align: center;
+
+}
+
+.contenedor-contacto, .contenedor-nosotros{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.contenedor-servicios{
+    display: flex;
+}
+.tour, .transporte, .alquiler {
+    padding: 20px;
+    text-align: center;
+    background-color: lightblue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style:initial;
+}
+
+.contenerdor{
+    background-color: lightblue;
+}
+
+
+body{
+    background-color: lightblue
+
+}

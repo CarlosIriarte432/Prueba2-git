@@ -1,0 +1,171 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/estilo.css"> 
+
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+    integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"
+    integrity="sha512-6Uv+497AWTmj/6V14BsQioPrm3kgwmK9HYIyWP+vClykX52b0zrDGP7lajZoIY1nNlX4oQuh7zsGjmF7D0VZYA=="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="jquery-calendario/jquery-ui.css">
+
+<script type="text/javascript" src="jquery-calendario/jquery-ui.js"></script>
+<script type="text/javascript" >
+	$(document).ready(function(){
+			  $( "#calendario" ).datepicker();
+		});
+</script>
+
+
+  <title>Formulario</title>
+</head>
+
+<body>
+  <header class="cabecera">
+    <div class="navegador-container  ">
+        <div class="row ">
+          <div class="logo col-sm "><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+            src="img\icons\airplane(1).png" alt=""></a></div>
+
+            <div class="cuadro col-sm btn btn-primary"><a href="index.html">
+                    <p style="color: aliceblue;">Inicio</p>
+                </a></div>
+
+            <div class="cuadro col-sm"><a href="recomendados.html">
+                    <p style="color: aliceblue;">Tours</p>
+                </a></div>
+
+            <div class="cuadro col-sm"><a href="servicios.html">
+                    <p style="color: aliceblue;">Servicios</p>
+                </a></div>
+
+            <div class="cuadro col-sm"><a href="nosotros.html">
+                    <p style="color: aliceblue;">Nosotros</p>
+                </a></div>
+
+            <div class="cuadro col-sm"><a href="contacto.html">
+                    <p style="color: aliceblue;">Contacto</p>
+                </a></div>
+
+            <div class="cuadro col-sm"><a href="api_tiempo.html">
+                    <p style="color: aliceblue;">Clima</p>
+                </a></div>
+            
+            <div class="cuadro col-sm"><a href="formulario.html">
+              <p style="color: aliceblue;">Agendar</p>
+          </a></div>
+
+        </div>
+    </div>
+</header>
+
+  <div class="contenedorform">
+    <div class="row">
+      <div class="col-md-6" style="padding-top:50px;">
+
+        <!-- FORM -->
+        <form id="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" id="name" class="form-control required" placeholder="Nombre Completo"><br />
+          </div>
+          <div class="form-group">
+            <input type="text" name="rut" id="rut" class="form-control required" placeholder="Rut">  <br />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control required" placeholder="Email"><br />
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label>
+              <input type="radio" name="transporte" class="required" checked="checked"> Transporte compartido
+            </label>
+            <label>
+              <input type="radio" name="transporte" class="required"> Alquiler de vehiculos
+            </label>
+
+          </div>
+          <br />
+          <div class="form-group">
+            <label>
+              <input type="radio" name="alojamiento" class="required" checked="checked"> Hotel
+            </label>
+            <label>
+              <input type="radio" name="alojamiento" class="required"> AirBnB
+            </label>
+          </div>
+          <br />
+          <div class="form-group">
+            <label>Seleccione tour: </label>
+            <select name="tours" class="required" name="cmbTours">
+              <option value="">-Seleccionar-</option>
+              <option value="Tour a Punta Cana">Tour a Punta Cana</option>
+              <option value="Tour a Macchu Picchu">Tour a Macchu Picchu</option>
+              <option value="Tour a Paris">Tour a Paris</option>
+              <option value="Tour a Londres">Tour a Londres</option>
+              <option value="Tour a Cancun">Tour a Cancun</option>
+              <option value="Tour a isla de Pascua">Tour a Isla de Pascua</option>
+            </select>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label>Seleccione fecha: </label>
+            <input type="text" name="calendario" id="calendario" readonly="" placeholder="mm/dd/yy"><br />
+          </div>
+
+      </div>
+
+    <div>  <button id="submit-form">ENVIAR</button> </div>
+    
+      </form>
+      <!-- END FORM -->
+
+    </div>
+
+  </div>
+
+  </html>
+
+  <footer>
+    <div class="abajo navegador">
+      <div class="row">
+        <div class="col-sm-2"><a href="https://twitter.com/home?lang=es"><img
+              src="img\icons\580b57fcd9996e24bc43c53e.png" alt="" style="width:42px;height:42px;"></a></div>
+        <div class="col-sm-2"><a href="https://www.facebook.com/"><img src="img\icons\facebook.png" alt=""
+              style="width:42px;height:42px;"></a></div>
+        <div class="col-sm-2"><a href="https://www.instagram.com/"><img src="img\icons\580b57fcd9996e24bc43c521.png"
+              alt="" style="width:42px;height:42px;"></a></div>
+        <div class="col-sm-2"><a href="nosotros.html">Nosotros</a></div>
+        <div class="col-sm-2"><a href="contacto.html">Contacto</a></div>
+      </div>
+      <p>Todos los derechos reservados</p>
+    </div>
+
+  </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+    crossorigin="anonymous"></script>
+
+  <script src="js/form.validacion.js"></script>
+
+  <script type="text/javascript" src="js/messages_es.js"></script>
+</body>
+
+</html>

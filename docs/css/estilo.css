@@ -1,0 +1,152 @@
+.header {
+    background-color: rgb(127, 197, 255);
+    display: flex;
+    justify-content: space-around;
+}
+
+.row{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+
+
+}
+
+
+
+
+.logo{
+    text-align-last: center;
+    
+
+}
+
+.container{
+
+    display: flex;
+}
+
+.cabecera{
+    flex-direction: row;
+}
+
+
+
+.cuadro{
+    background-color: lightslategray;
+    border-color: darkblue;
+    border-width: 3px;
+    border-style: groove;
+    place-content: center;
+    text-align-last: center;
+    padding: 10px;
+
+
+}
+
+.cuadro:hover{
+    background-color: rgb(0, 119, 255);
+    border-width: 10px;
+}
+
+
+.navegador{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-width: 1%;
+    border-color: burlywood;
+
+
+}
+
+
+.medio{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+body{
+    background-color: lightblue;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.carrusel{
+
+    content: icon;
+    
+}
+
+.contenido {
+    display: flex;
+    background-color: aquamarine;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    font-family: verdana;
+    font-weight: bold;
+}
+
+.principal {
+    background-color: lightblue;
+}
+
+
+.abajo{
+    text-align: center;
+
+}
+
+
+.titulo{
+    text-align: center;
+}
+
+.tour, .transporte, .alquiler{
+    
+    width: 60%;
+    height: 5px;
+    text-align: center;
+}
+
+.foto_tour, .foto_transporte, .foto_alquiler{
+    width: 150%;
+    height: 185px;
+    text-align: center;
+}
+
+.contenedor {
+
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.contenedorform {
+
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+}
+
+#submit-form{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    height: 50px;
+    width: 250px;
+}
+
