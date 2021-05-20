@@ -10,4 +10,4 @@ Integrantes:
 
 link repositorio git:
 
-https://carlosiriarte432.github.io/Prueba-git/index.html
+https://github.com/CarlosIriarte432/Prueba2-git
