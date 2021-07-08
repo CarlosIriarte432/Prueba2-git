@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'jquery-calendario/jquery-ui.css' %}">
+
+<script type="text/javascript" src="{% static 'jquery-calendario/jquery-ui.js' %}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#calendario").datepicker();
+    });
+</script>
+
+
+{% block title %}Registro de reservas{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <form id="form" method="GET">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre" id="nombre_label">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control required"
+                    placeholder="Ingrese nombre...">
+            </div>
+            <div class="form-group">
+                <label for="rut" id="rut_label">Rut</label>
+                <input type=number  name="rut" id="rut" class="form-control required"
+                    placeholder="Rut sin puntos y sin guion...">
+            </div>
+            <div class="form-group">
+                <label for="correo" id="correo_label">Email</label>
+                <input type=text  name="correo" id="correo" class="form-control required"
+                    placeholder="Ingrese su Email...">
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="radio" name="transporte" class="required" checked="checked"> Transporte compartido
+                </label>
+                <label>
+                    <input type="radio" name="transporte" class="required"> Alquiler de vehiculos
+                </label>
+
+            </div>
+            <br />
+            <div class="form-group">
+                <label>
+                    <input type="radio" name="alojamiento" class="required" checked="checked"> Hotel
+                </label>
+                <label>
+                    <input type="radio" name="alojamiento" class="required"> AirBnB
+                </label>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <label>Seleccione tour: </label>
+                <select name="tours" class="required" name="cmbTours">
+                    <option value="">-Seleccionar-</option>
+                    <option value="Tour a Punta Cana">Tour a Punta Cana</option>
+                    <option value="Tour a Macchu Picchu">Tour a Macchu Picchu</option>
+                    <option value="Tour a Paris">Tour a Paris</option>
+                    <option value="Tour a Londres">Tour a Londres</option>
+                    <option value="Tour a Cancun">Tour a Cancun</option>
+                    <option value="Tour a isla de Pascua">Tour a Isla de Pascua</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha" id="fecha_label">Fecha</label>
+                <input type="text"  name="peso" id="fecha" class="form-control required"
+                    placeholder="Ingrese fecha 'DD/MM/YYYY'">
+            </div>
+
+            <br />
+
+         
+
+    </div>
+
+</div>
+
+    <br>
+    <button class="btn btn-dark" id="submit-form">Agregar</button>
+    </form>
+    <br><br>
+
+    <!-- END FORM -->
+</div>
+</div>
+
+{% endblock %}

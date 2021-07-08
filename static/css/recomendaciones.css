@@ -1,0 +1,141 @@
+
+body {
+    background-color: lightblue;
+}
+
+.header {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+
+
+}
+
+.logo{
+    text-align-last: center;
+    
+
+}
+
+.cuadro{
+    background-color: lightslategray;
+    border-color: darkblue;
+    border-width: 5px;
+    border-style: outset;
+    place-content: center;
+    text-align-last: center;
+    padding: 10px;
+    width: 135px;
+    
+    
+
+
+}
+.cuadro:hover{
+    background-color: rgb(87, 151, 224);
+    border-width: 8px;
+}
+
+
+.navegador{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-width: 1%;
+    border-color: burlywood;
+
+
+}
+
+
+.contenido {
+    display: flex;
+    background-color: lightblue;
+    color: lightblue;
+    width: 100%;
+    font-family: verdana;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.principal {
+    background-color: lightblue;
+}
+
+.fono {
+    width: 100%;
+}
+
+.rescate {
+    width: 100%;
+    text-align: center;
+}
+
+.redes {
+    width: 100%;
+    text-align: right;
+}
+
+.redes ul li {
+    background-color: lightblue;
+    border-radius: 70%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.redes img {
+    height: 30px;
+    color: #000;
+}
+
+.lateral_1, .lateral_2 {
+    width: 50%;
+    height: 500px;
+    padding: 30px;
+    background-color: lightblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+
+.lateral_1 {
+    text-align: right;
+    width: 50%
+}
+
+.lateral_2 img {
+    width: 50%;
+}
+
+.abajo{
+    text-align: center;
+
+}
+
+.contenedor-inferior {
+    display: flex;
+}
+
+.footer {
+    text-align: center;
+    background-color: lightblue;
+}
+
+
+@media screen and (max-width:720px) {
+    .header {
+        flex-direction: column;
+    }
+    .footer {
+        display: none;
+    }
+}

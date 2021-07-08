@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1 class="display-3">Docentes</h1>
+  <hr>
+  <a class="btn" role="button" href="{% url 'reservas_form' %}">Agregar</a>
+  <hr>
+
+  {% if not object_list %}
+  <h1>No hay registro de docentes</h1>
+  <br><br><br><br><br><br><br><br>
+  {% else %}
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td>Nombre</td>
+        <td>Rut</td>
+        <td>Correo</td>
+        <td>Transporte</td>
+        <td>Hotel</td>
+        <td>Tour</td>
+        <td>Fecha</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for reserva in object_list %}
+      <tr>
+        <td>{{ reserva.nombre }}</td>
+        <td>{{ reserva.rut }}</td>
+        <td>{{ reserva.correo }}</td>
+        <td>{{ reserva.transporte }}</td>
+        <td>{{ reserva.hotel }}</td>
+        <td>{{ reserva.tour }}</td>
+        <td>{{ reserva.fecha }}</td>
+        <td>
+          <a class="btn btn-primary" href="{% url 'editar_reserva' reserva.id%}"> Editar </a>
+          <a class="btn btn-danger" href="{% url 'borrar_reserva' reserva.id%}">Eliminar</a>
+        </td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+</div>
+
+{% endblock %}

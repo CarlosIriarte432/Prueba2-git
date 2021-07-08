@@ -1,0 +1,101 @@
+<!-- base.html -->
+{% load static %}
+<html>
+
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+    {% block css %} {% endblock css %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color: rgba(42, 128, 179, 0.842);">
+
+    {% block navbar %}
+    <!-- Cabecera -->
+    <div class="abajo navegador">
+        <div class="row">
+            <div class="col-sm btn-info"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <img src="{% static 'images\icons\airplane(1).png' %}" alt="home"></a></div>
+
+            <div class="col-sm btn-info"><a href="{% url 'index' %}">
+                    <p style="color: aliceblue; ">Inicio</p>
+                </a></div>
+
+            <div class="col-sm btn-info"><a href="{% url 'recomendados' %}">
+                    <p style="color: aliceblue;">Tours</p>
+                </a></div>
+
+            <div class="col-sm btn-info"><a href="{% url 'servicios' %}">
+                    <p style="color: aliceblue;">Servicios</p>
+                </a></div>
+
+            <div class="col-sm btn-info"><a href="{% url 'nosotros' %}">
+                    <p style="color: aliceblue;">Nosotros</p>
+                </a></div>
+
+            <div class="col-sm btn-info"><a href="{% url 'contacto' %}">
+                    <p style="color: aliceblue;">Contacto</p>
+                </a></div>
+
+            <div class="col-sm btn-info"><a href="{% url 'api_tiempo' %}">
+                    <p style="color: aliceblue;">Clima</p>
+                </a></div>
+
+            <div class="col-sm btn-info"><a href="{% url 'formulario' %}">
+                    <p style="color: aliceblue;">Agendar</p>
+                </a></div>
+
+            {% if not user.is_authenticated %}
+                <div class="col-sm btn-info"><a href="{% url 'login' %}">iniciar sesión</a></div>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+            <div class="col-sm btn-info"><a href="{% url 'reservas_list' %}">Listar usurios</a></div>
+            {% endif %}
+            
+            <div class="col-sm btn-info"><a href="{% url 'logout' %}">Cerrar sesión</a></div>
+            <div class="col-sm btn-info"> Usuario: {{ user.get_username }} </div>
+            {% endif %}
+
+        </div>
+    </div>
+    {% endblock %}
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+
+    {% block footer %}
+
+    <footer>
+        <div class="abajo navegador">
+            <div class="row">
+                <div class="col-sm-2"><a href="https://twitter.com/home?lang=es"><img src="{%static 'images\icons\twitter.png'%}" alt="" style="width:42px;height:42px;"></a>
+                </div>
+                <div class="col-sm-2"><a href="https://www.facebook.com/"><img src="{%static 'images\icons\facebook.png'%}" alt="" style="width:42px;height:42px;"></a>
+                </div>
+                <div class="col-sm-2"><a href="https://www.instagram.com/"><img src="{%static 'images\icons\instagram.png'%}" alt=""style="width:42px;height:42px;"></a>
+                </div>
+                <div class="col-sm-2"><a href="nosotros.html">Nosotros</a></div>
+                <div class="col-sm-2"><a href="contacto.html">Contacto</a></div>
+            </div>
+            <p>Todos los derechos reservados</p>
+        </div>
+
+    </footer>
+
+    {% endblock %}
+
+    {% block javascript %} {% endblock javascript %}
+</body>
+
+</html>
